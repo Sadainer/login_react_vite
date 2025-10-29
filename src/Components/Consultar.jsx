@@ -9,7 +9,8 @@ export default function Consultar (){
 
   const token = localStorage.getItem("token"); // O de donde lo tengas guardado
 
-  fetch("https://localhost:7142/api/Personas", {
+  const rutaURL = "https://webapijwt.onrender.com/";
+  fetch(rutaURL + "api/Personas", {
     method: "GET",
     //credentials: "include",
     headers: {

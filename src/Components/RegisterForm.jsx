@@ -9,7 +9,8 @@ function RegisterForm() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://localhost:7142/api/login/register", {
+    const rutaURL = "https://webapijwt.onrender.com/";
+    const response = await fetch(rutaURL + "api/login/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, nombre, apellido, password }),

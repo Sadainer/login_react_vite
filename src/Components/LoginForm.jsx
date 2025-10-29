@@ -10,7 +10,8 @@ function LoginForm() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://localhost:7142/api/login", {
+    const rutaURL = "https://webapijwt.onrender.com/";
+    const response = await fetch(rutaURL+"api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
